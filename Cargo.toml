@@ -1,8 +1,8 @@
 [package]
 name = "cond_sync"
-version = "0.2.1"
-edition = "2021"
-rust-version = "1.70"
+version = "0.2.2"
+edition = "2024"
+rust-version = "1.85"
 
 description = "Hides the boilerplate code needed with std::sync::Condvar"
 readme = true

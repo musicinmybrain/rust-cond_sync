@@ -19,10 +19,12 @@ fn test() {
             println!("Thread {i}: work on phase 1");
         });
     }
-    assert!(cond_sync
-        .wait_until_or_timeout(|v| *v == NO_OF_THREADS, Duration::from_millis(800))
-        .unwrap()
-        .is_condition());
+    assert!(
+        cond_sync
+            .wait_until_or_timeout(|v| *v == NO_OF_THREADS, Duration::from_millis(800))
+            .unwrap()
+            .is_condition()
+    );
 
     println!("Main: All threads initialized");
     thread::sleep(Duration::from_millis(100)); // just to let the threads finish (better use join)}

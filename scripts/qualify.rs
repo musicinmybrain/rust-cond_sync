@@ -1,4 +1,4 @@
-#!/usr/bin/env rust-script
+#!/usr/bin/env run-cargo-script
 //! ```cargo
 //! [dependencies]
 //! yansi = "0.5"
@@ -48,7 +48,7 @@ fn main() {
 
     // Build in important variants
     std::fs::remove_file("Cargo.lock").ok();
-    run_command!("cargo +1.70.0 build");
+    run_command!("cargo +1.85.0 build");
 
     std::fs::remove_file("Cargo.lock").ok();
     run_command!("cargo build");
@@ -59,7 +59,7 @@ fn main() {
     run_command!("cargo +nightly clippy --all-targets -- -D warnings");
 
     // Run tests in important variants
-    run_command!("cargo +1.70.0 test");
+    run_command!("cargo +1.85.0 test");
     run_command!("cargo test --release");
 
     // doc
