@@ -6,7 +6,7 @@ rust-version = "1.70"
 
 description = "Hides the boilerplate code needed with std::sync::Condvar"
 readme = true
-repository = "https://github.com/emabee/cond_sync"
+repository = "https://github.com/emabee/rust-cond_sync"
 license = "MIT OR Apache-2.0"
 keywords = ["concurrency", "synchronization"]
 categories = ["concurrency"]
